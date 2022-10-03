@@ -1,3 +1,4 @@
+const { application } = require('express');
 const express = require("express");
 const router = express.Router();
 const {
@@ -8,10 +9,10 @@ const {
   remove,
 } = require("../controllers/benifitsController");
 
-router.get("/", list);
-router.get("/:id", show);
-router.post("/", create);
-router.put("/:id", update);
-router.delete("/:id", remove);
+router.get("/benifits", list);
+router.get("/benifits/:id", show);
+router.post("/benifits", create);
+router.put("/benifits/:id", update);
+router.delete("/benifits/:id", remove);
 
 module.exports = router;

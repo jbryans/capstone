@@ -34,18 +34,18 @@ module.exports= {
     ],
     benifits: [
         {
-            id: 1,
-            pest_price: "0",
-            lawn_price: "500",
-            horticulture_price: "500",
-            user_id: 3
+            "id": 1,
+            "pest_price": "0",
+            "lawn_price": "500",
+            "horticulture_price": "500",
+            "user_id": 3
         },
         {
-            id: 2,
-            pest_price: "300",
-            lawn_price: "300",
-            horticulture_price: "300",
-            user_id: 2
+            "id": 2,
+            "pest_price": "300",
+            "lawn_price": "300",
+            "horticulture_price": "300",
+            "user_id": 2
         },
     ],
 
