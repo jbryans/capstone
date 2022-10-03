@@ -27,6 +27,27 @@ const show =  (req, res) => {
     // res.json(customers);
 };
 
+const showBenifitsByCustomer = (req, res) => {
+    pool.query(
+      `SELECT 
+        customers.id, 
+        customers.first_name, 
+        benifits.lawn_price 
+      FROM trades 
+        JOIN customers 
+        WHERE benifits.user_id = ${req.params.id} 
+        AND
+        customers.id = ${req.params.id}`,
+      (err, row) => {
+        if (err) {
+          console.log({ message: "Error occurred: " + err });
+          return res.status(500).send("An unexpected error occurred");
+        }
+        res.json(row);
+      }
+    );
+  };
+
 
 //create one
 // const create = (req, res) => {
@@ -91,5 +112,6 @@ module.exports = {
     show,
     create,
     update,
-    remove
+    remove,
+    showBenifitsByCustomer
 }
